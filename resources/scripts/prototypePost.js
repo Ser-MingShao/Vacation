@@ -195,7 +195,7 @@ var BROWSER_VERSION = 5000;
     // -----------------------------------------------------------------------------------------
     // -----------------------------------------------------------------------------------------
     _messageCenter.dispatchMessageRecursively = function(message, data) {
-        console.log("dispatched to " + window.location.toString());
+        // console.log("dispatched to " + window.location.toString());
 
         // dispatch to the top center first
         _messageCenter.dispatchMessage(message, data);
@@ -2171,6 +2171,7 @@ $axure.internal(function($ax) {
             inputValue = elementHtml.find('#' + element + '_input')[0].checked;
             eventInfo.inputType = className;
             eventInfo.inputValue = inputValue;
+            console.log("ax_checkbox");
         }
 
         if(className === 'ax_text_field') {
@@ -3071,10 +3072,12 @@ $axure.internal(function($ax) {
             if(moveResult) {
                 xValue = moveResult.x * ratio;
                 yValue = moveResult.y * ratio;
+                console.log("22222");
             } else {
                 comboState.moveResult = moveResult = { x: $ax.expr.evaluateExpr(moveInfo.xValue, eventInfoCopy), y: $ax.expr.evaluateExpr(moveInfo.yValue, eventInfoCopy) };
                 xValue = moveResult.x * ratio;
                 yValue = moveResult.y * ratio;
+                console.log("3333");
             }
             if (stopInfo.instant || stopInfo.end == stopInfo.len) comboState.moveResult = undefined;
 
@@ -12299,6 +12302,7 @@ $axure.internal(function($ax) {
 
         $(window.document).bind('keyup', function(e) {
             if(e.keyCode == '13' || e.keyCode == '32') {
+                console.log("点哦");
                 if(window.lastFocusedClickable) $(window.lastFocusedClickable).click();
             }
         });
