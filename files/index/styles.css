@@ -2496,7 +2496,7 @@ body {
   position:absolute;
   left:0px;
   top:0px;
-  width:454px;
+  width:550px !important;
   word-wrap:break-word;
 }
 #u147_div {
@@ -2529,7 +2529,7 @@ body {
 #u148 {
   border-width:0px;
   position:absolute;
-  left:0px;
+  left:89px !important;
   top:0px;
   width:101px;
   word-wrap:break-word;
